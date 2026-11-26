@@ -1,0 +1,6 @@
+dist/
+node_modules/
+.vercel/
+cv/*.aux
+cv/*.log
+cv/*.out
