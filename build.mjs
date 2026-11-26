@@ -71,7 +71,7 @@ function page(c, other) {
     .map(
       (e) => `
         <li class="tl-item${e.end ? '' : ' is-current'}">
-          <div class="tl-when"><span>${esc(e.start)}</span><span aria-hidden="true">–</span><span>${esc(e.end ?? c.ui.present)}</span></div>
+          <div class="tl-when"><span>${esc(e.start)}</span> <span>–</span> <span>${esc(e.end ?? c.ui.present)}</span></div>
           <div class="tl-body">
             <h3>${esc(e.role)} <span class="at">· ${esc(e.org)}</span></h3>
             <p class="tl-place">${esc(e.place)}</p>
@@ -91,7 +91,7 @@ function page(c, other) {
           <ul class="chips" aria-label="Stack">${p.stack.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
           <p class="card-links">
             ${p.repo ? `<a href="${p.repo}" rel="noopener" aria-label="${esc(c.ui.code)}: ${esc(p.title)}">${icons.github}<span>${esc(c.ui.code)}</span></a>` : `<span class="muted">${esc(c.ui.private)}</span>`}
-            ${p.demo ? `<a href="${p.demo}" rel="noopener" aria-label="${esc(c.ui.demo)}: ${esc(p.title)}">${icons.arrow}<span>${esc(c.ui.demo)}</span></a><span class="muted small">${esc(p.demoNote)}</span>` : ''}
+            ${p.demo ? `<a href="${p.demo}" rel="noopener" aria-label="${esc(c.ui.demo)}: ${esc(p.title)}">${icons.arrow}<span>${esc(c.ui.demo)}</span></a> <span class="muted small">${esc(p.demoNote)}</span>` : ''}
           </p>
         </article>`,
     )
@@ -110,7 +110,7 @@ function page(c, other) {
     .join('');
 
   const awards = c.education.awards
-    .map(([t, u, y]) => `<li><span>${esc(t)}</span><span class="muted">${esc(u)} · ${esc(y)}</span></li>`)
+    .map(([t, u, y]) => `<li><span>${esc(t)}</span> <span class="muted">${esc(u)} · ${esc(y)}</span></li>`)
     .join('');
 
   const stack = c.stack.groups
@@ -168,7 +168,7 @@ function page(c, other) {
   <section class="hero wrap" aria-labelledby="hero-title">
     <div class="hero-text">
       <p class="kicker"><span class="dot" aria-hidden="true"></span>${esc(c.hero.kicker)}</p>
-      <h1 id="hero-title"><span class="name">Juan del Mazo Vázquez</span><span class="lead">${esc(c.hero.lead[0])} <em>${esc(c.hero.lead[1])}</em></span></h1>
+      <h1 id="hero-title"><span class="name">Juan del Mazo Vázquez</span> <span class="lead">${esc(c.hero.lead[0])} <em>${esc(c.hero.lead[1])}</em></span></h1>
       <p class="value">${esc(c.hero.value)}</p>
       <p class="hero-actions">
         <a class="btn btn-primary" href="${cvSelf}" download>${icons.download}<span>${esc(c.ui.cv)}</span></a>
@@ -182,7 +182,7 @@ function page(c, other) {
         <path class="series series-a" d="${a}" pathLength="1"/>
         <path class="series series-b" d="${b}" pathLength="1"/>
       </svg>
-      <figcaption><span class="key key-a">lead</span><span class="key key-b">lag</span><span class="muted">t → t + 6</span></figcaption>
+      <figcaption><span class="key key-a">lead</span> <span class="key key-b">lag</span> <span class="muted">t → t + 6</span></figcaption>
     </figure>
   </section>
 
