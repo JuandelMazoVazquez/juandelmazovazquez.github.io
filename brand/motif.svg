@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440">
+<style>
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader.woff2') format('woff2');font-weight:300 700;font-style:normal}
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader-italic.woff2') format('woff2');font-weight:300 700;font-style:italic}
+.serif{font-family:'Newsreader',Georgia,serif}
+.mono{font-family:'Cascadia Mono',Consolas,ui-monospace,monospace}
+</style>
+<rect width="640" height="440" fill="#f6f4ef"/>
+<g fill="#dcd7cc"><circle cx="40" cy="45" r="3.9"/><circle cx="110" cy="45" r="3.9"/><circle cx="180" cy="45" r="3.9"/><circle cx="250" cy="45" r="3.9"/><circle cx="320" cy="45" r="3.9"/><circle cx="390" cy="45" r="3.9"/><circle cx="460" cy="45" r="3.9"/><circle cx="530" cy="45" r="3.9"/><circle cx="600" cy="45" r="3.9"/><circle cx="40" cy="115" r="3.9"/><circle cx="110" cy="115" r="3.9"/><circle cx="180" cy="115" r="3.9"/><circle cx="250" cy="115" r="3.9"/><circle cx="320" cy="115" r="3.9"/><circle cx="40" cy="185" r="3.9"/><circle cx="110" cy="185" r="3.9"/><circle cx="460" cy="185" r="3.9"/><circle cx="530" cy="185" r="3.9"/><circle cx="600" cy="185" r="3.9"/><circle cx="40" cy="255" r="3.9"/><circle cx="110" cy="255" r="3.9"/><circle cx="250" cy="255" r="3.9"/><circle cx="320" cy="255" r="3.9"/><circle cx="390" cy="255" r="3.9"/><circle cx="460" cy="255" r="3.9"/><circle cx="530" cy="255" r="3.9"/><circle cx="600" cy="255" r="3.9"/><circle cx="250" cy="325" r="3.9"/><circle cx="320" cy="325" r="3.9"/><circle cx="390" cy="325" r="3.9"/><circle cx="460" cy="325" r="3.9"/><circle cx="600" cy="325" r="3.9"/><circle cx="40" cy="395" r="3.9"/><circle cx="110" cy="395" r="3.9"/><circle cx="180" cy="395" r="3.9"/><circle cx="250" cy="395" r="3.9"/><circle cx="320" cy="395" r="3.9"/><circle cx="390" cy="395" r="3.9"/><circle cx="460" cy="395" r="3.9"/><circle cx="530" cy="395" r="3.9"/><circle cx="600" cy="395" r="3.9"/></g>
+<path stroke="#b9b3a6" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="1.4 8.4" d="M390 185 L390 297 Q390 325 418 325 L530 325"/>
+<circle stroke="#b9b3a6" fill="#f6f4ef" cx="530" cy="325" r="7" stroke-width="2.8"/>
+<path stroke="#1f5d50" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M40 325 L152 325 Q180 325 180 297 L180 213 Q180 185 208 185 L362 185 Q390 185 390 157 L390 143 Q390 115 418 115 L600 115"/>
+<g fill="#1f5d50"><circle cx="110" cy="325" r="6"/><circle cx="180" cy="325" r="6"/><circle cx="180" cy="255" r="6"/><circle cx="180" cy="185" r="6"/><circle cx="250" cy="185" r="6"/><circle cx="320" cy="185" r="6"/><circle cx="390" cy="185" r="6"/><circle cx="390" cy="115" r="6"/><circle cx="460" cy="115" r="6"/><circle cx="530" cy="115" r="6"/></g>
+<circle fill="#1f5d50" cx="40" cy="325" r="7.7"/>
+<path fill="#f6f4ef" stroke="#1f5d50" stroke-width="3.5" stroke-linejoin="round" d="M390 173.1 L401.9 185 L390 196.9 L378.1 185 Z"/>
+<circle fill="#b0532a" cx="600" cy="115" r="22.4" opacity="0.18"/>
+<circle fill="#b0532a" cx="600" cy="115" r="10.5"/>
+</svg>

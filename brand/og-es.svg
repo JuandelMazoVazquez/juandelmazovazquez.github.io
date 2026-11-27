@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<style>
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader.woff2') format('woff2');font-weight:300 700;font-style:normal}
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader-italic.woff2') format('woff2');font-weight:300 700;font-style:italic}
+.serif{font-family:'Newsreader',Georgia,serif}
+.mono{font-family:'Cascadia Mono',Consolas,ui-monospace,monospace}
+</style>
+<rect width="1200" height="630" fill="#f6f4ef"/>
+<g transform="translate(80 72)">
+  <rect width="72" height="72" rx="14.4" fill="#1f5d50"/>
+  <g fill="#f6f4ef" transform="translate(9.4 45.9) scale(0.01349)"><path transform="translate(0 0)" d="M624 -535Q585 -409 515 -306Q444 -204 358 -131Q272 -58 185 -19Q97 20 23 20Q-45 20 -79 -8Q-113 -36 -113 -79Q-113 -125 -83 -154Q-52 -184 -15 -184Q-2 -184 14 -169Q29 -155 49 -136Q69 -117 94 -103Q118 -88 149 -88Q196 -88 227 -117Q257 -146 284 -235L630 -1367L472 -1409L478 -1430H1058L1052 -1409L877 -1363Z"/><path transform="translate(650 0)" d="M862 -825Q834 -903 796 -931Q759 -960 710 -960Q641 -960 573 -909Q504 -858 442 -775Q380 -692 331 -595Q282 -498 254 -404Q226 -310 226 -238Q226 -177 251 -154Q275 -130 316 -130Q338 -130 365 -140Q391 -150 424 -173Q456 -197 494 -235Q531 -273 575 -328Q619 -382 669 -457L942 -1281Q924 -1294 899 -1312Q874 -1330 846 -1350Q819 -1371 790 -1392L792 -1403L1205 -1486H1211L763 -87L716 -123Q747 -117 795 -132Q842 -148 909 -197Q975 -245 1061 -339L1071 -332Q943 -144 835 -61Q727 22 644 22Q585 22 566 -8Q547 -38 567 -103L680 -452L692 -452Q595 -300 520 -206Q444 -112 385 -62Q326 -13 279 4Q231 22 191 22Q135 22 91 -1Q47 -24 22 -68Q-2 -111 -2 -173Q-2 -274 34 -392Q71 -510 136 -625Q200 -739 283 -834Q366 -929 459 -986Q552 -1043 647 -1043Q713 -1043 771 -999Q828 -954 869 -863Z"/><path transform="translate(1679 0)" d="M599 -1375 136 -65 311 -21 304 0H-112L-106 -21L72 -64L525 -1339L375 -1409L380 -1430H791L929 -204L877 -196L1724 -1430H1781L1769 -1397L798 16H712L556 -1342ZM1727 -1430H2158L2153 -1409L1956 -1366L1672 -65L1824 -21L1817 0H1241L1247 -21L1426 -66Z"/></g>
+  <circle cx="58.5" cy="57.4" r="4.1" fill="#e08b60"/>
+</g>
+<g fill="#dcd7cc"><circle cx="752" cy="86" r="2.9"/><circle cx="804" cy="86" r="2.9"/><circle cx="856" cy="86" r="2.9"/><circle cx="908" cy="86" r="2.9"/><circle cx="752" cy="138" r="2.9"/><circle cx="804" cy="138" r="2.9"/><circle cx="1012" cy="138" r="2.9"/><circle cx="1064" cy="138" r="2.9"/><circle cx="1116" cy="138" r="2.9"/><circle cx="752" cy="190" r="2.9"/><circle cx="804" cy="190" r="2.9"/><circle cx="908" cy="190" r="2.9"/><circle cx="960" cy="190" r="2.9"/><circle cx="1012" cy="190" r="2.9"/><circle cx="1064" cy="190" r="2.9"/><circle cx="1116" cy="190" r="2.9"/><circle cx="908" cy="242" r="2.9"/><circle cx="960" cy="242" r="2.9"/><circle cx="1012" cy="242" r="2.9"/><circle cx="1116" cy="242" r="2.9"/></g>
+<path stroke="#b9b3a6" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="1 6.2" d="M960 138 L960 221.2 Q960 242 980.8 242 L1064 242"/>
+<circle stroke="#b9b3a6" fill="#f6f4ef" cx="1064" cy="242" r="5.2" stroke-width="2.1"/>
+<path stroke="#1f5d50" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M752 242 L835.2 242 Q856 242 856 221.2 L856 158.8 Q856 138 876.8 138 L939.2 138 Q960 138 960 117.2 L960 106.8 Q960 86 980.8 86 L1116 86"/>
+<g fill="#1f5d50"><circle cx="804" cy="242" r="4.4"/><circle cx="856" cy="242" r="4.4"/><circle cx="856" cy="190" r="4.4"/><circle cx="856" cy="138" r="4.4"/><circle cx="908" cy="138" r="4.4"/><circle cx="960" cy="138" r="4.4"/><circle cx="960" cy="86" r="4.4"/><circle cx="1012" cy="86" r="4.4"/><circle cx="1064" cy="86" r="4.4"/></g>
+<circle fill="#1f5d50" cx="752" cy="242" r="5.7"/>
+<path fill="#f6f4ef" stroke="#1f5d50" stroke-width="2.6" stroke-linejoin="round" d="M960 129.2 L968.8 138 L960 146.8 L951.2 138 Z"/>
+<circle fill="#b0532a" cx="1116" cy="86" r="16.6" opacity="0.18"/>
+<circle fill="#b0532a" cx="1116" cy="86" r="7.8"/>
+<text class="serif" x="80" y="372" font-size="84" font-weight="500" letter-spacing="-1.5" fill="#16181b">Juan del Mazo Vázquez</text>
+<text class="serif" x="82" y="440" font-size="44" font-style="italic" fill="#1f5d50">Analista de profesión, ingeniero de formación.</text>
+<line x1="80" x2="1120" y1="508" y2="508" stroke="#dcd7cc" stroke-width="1.5"/>
+<text class="mono" x="80" y="558" font-size="21" fill="#5b5f66">Junior Business Analyst en Bankinter · Madrid</text>
+<text class="mono" x="1120" y="558" font-size="21" fill="#5b5f66" text-anchor="end">juandelmazovazquez.vercel.app</text>
+</svg>

@@ -1,5 +1,5 @@
 % Shared layout for both CV versions (based on Jake Gutierrez's resume template, MIT).
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -20,11 +20,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 \raggedbottom
@@ -65,7 +65,8 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\cvheader}[1]{
+% #1 location, #2 positioning line, #3 one-sentence profile.
+\newcommand{\cvheader}[3]{
 \begin{center}
     {\Huge \scshape Juan del Mazo Vázquez} \\ \vspace{3pt}
     \small \faPhone*\ \href{tel:+34678641703}{(+34) 678 64 17 03} \quad
@@ -73,6 +74,9 @@
     \faLinkedin\ \href{https://www.linkedin.com/in/juan-del-mazo-7500a7276}{juan-del-mazo} \quad
     \faGithub\ \href{https://github.com/JuandelMazoVazquez}{JuandelMazoVazquez} \\ \vspace{2pt}
     \faGlobe\ \href{https://juandelmazovazquez.vercel.app}{juandelmazovazquez.vercel.app} \quad
-    \faMapMarker*\ #1
+    \faMapMarker*\ #1 \\ \vspace{7pt}
+    {\large\itshape #2} \\ \vspace{2pt}
+    \parbox{0.9\textwidth}{\centering\small #3}
 \end{center}
+\vspace{-8pt}
 }
