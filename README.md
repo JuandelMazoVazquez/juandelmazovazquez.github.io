@@ -47,6 +47,10 @@ cd cv && pdflatex cv-en.tex && pdflatex cv-es.tex
 - **GitHub Pages**: `.github/workflows/pages.yml` builds and deploys on every push to `main`.
 - **Vercel**: the project is linked to this repository; `vercel.json` sets the build command and output directory, so every push to `main` deploys to production.
 
+## Old Shuffl address
+
+Shuffl lived at `/new-spoti/` until v1.4 and now lives at `/shuffl/`. The `new-spoti` repo is private, so GitHub Pages serves that path from this site: `public/new-spoti/` is a verbatim copy of `redirect/` in the [shuffl repo](https://github.com/JuandelMazoVazquez/shuffl/tree/main/redirect). It forwards path, query and hash to the new address and does not forward Spotify login callbacks. Copy it again if it changes there.
+
 ## Licence
 
 Code under the MIT licence (see `LICENSE`). Text, CV and images © Juan del Mazo Vázquez. Newsreader font under the SIL Open Font License 1.1.

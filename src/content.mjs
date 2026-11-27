@@ -111,8 +111,8 @@ export const content = {
           tag: 'Side project · 2026',
           body: 'A web app with no server that gives Spotify playlists a truly uniform shuffle: an unbiased Fisher–Yates over crypto.getRandomValues. Designed, built and released end to end; now at v1.4, with 300+ unit and end-to-end tests in CI.',
           stack: ['JavaScript', 'PWA', 'Playwright', 'GitHub Actions'],
-          repo: gh('new-spoti'),
-          demo: 'https://juandelmazovazquez.github.io/new-spoti/?demo=1',
+          repo: gh('shuffl'),
+          demo: 'https://juandelmazovazquez.github.io/shuffl/?demo=1',
           demoNote: 'demo mode, no account needed',
         },
         {
@@ -125,7 +125,7 @@ export const content = {
         {
           title: 'Sales forecasting from marketing spend',
           tag: 'MSc · 2024',
-          body: 'Forecasting weekly sales from advertising investment and web traffic, with time-aware cross-validation. A weighted ensemble of Elastic Net, Random Forest, XGBoost, KNN and a neural network reached a validation MAE of 298.75. Team project.',
+          body: 'Forecasting weekly sales from advertising investment and web traffic, with time-aware cross-validation. A weighted ensemble of Elastic Net, Random Forest, XGBoost, KNN and a neural network beat every individual model on the validation set. Team project.',
           stack: ['R', 'Elastic Net', 'Random Forest', 'XGBoost'],
           repo: gh('Sales-Prediction-Advanced-Regression'),
         },
@@ -159,7 +159,7 @@ export const content = {
           status: 'v1.4 shipped · iterating',
           body: 'Shuffl, the Spotify app above, keeps growing: it is at v1.4 and I keep adding features and polishing the next release.',
           stack: ['JavaScript', 'PWA', 'Playwright'],
-          repo: gh('new-spoti'),
+          repo: gh('shuffl'),
         },
       ],
     },
@@ -215,7 +215,7 @@ export const content = {
     locale: 'es_ES',
     title: 'Juan del Mazo Vázquez · Analista de profesión, ingeniero de formación',
     description:
-      'Junior Business Analyst en Bankinter. Ingeniero informático con un máster en Big Data Analytics (1st Class). Experiencia, proyectos, lo que construyo ahora y CV.',
+      'Junior Business Analyst en Bankinter. Ingeniero informático con un máster en Big Data Analytics (sobresaliente). Experiencia, proyectos, lo que construyo ahora y CV.',
     ogAlt: 'Juan del Mazo Vázquez. Analista de profesión, ingeniero de formación. Junior Business Analyst en Bankinter, Madrid.',
     nav: { about: 'Sobre mí', experience: 'Experiencia', projects: 'Proyectos', now: 'En marcha', education: 'Formación', stack: 'Competencias', contact: 'Contacto' },
     ui: {
@@ -250,7 +250,7 @@ export const content = {
         },
         {
           label: 'Trayectoria',
-          text: 'Estudié Ingeniería Informática en la Universidad Politécnica de Madrid, con un año de Erasmus en la Universidad de Bristol. Mientras terminaba el grado trabajé casi año y medio en Idaero Solutions haciendo software para el sector aeroespacial, donde dirigí el desarrollo de la interfaz de visualización de un gemelo digital. Después cursé el Máster en Big Data Analytics de la Universidad Carlos III de Madrid, que terminé con 1st Class, la calificación más alta.',
+          text: 'Estudié Ingeniería Informática en la Universidad Politécnica de Madrid, con un año de Erasmus en la Universidad de Bristol. Mientras terminaba el grado trabajé casi año y medio en Idaero Solutions haciendo software para el sector aeroespacial, donde dirigí el desarrollo de la interfaz de visualización de un gemelo digital. Después cursé el Máster en Big Data Analytics de la Universidad Carlos III de Madrid, que terminé con sobresaliente.',
         },
       ],
     },
@@ -308,8 +308,8 @@ export const content = {
           tag: 'Proyecto personal · 2026',
           body: 'Una aplicación web sin servidor que baraja las playlists de Spotify de forma realmente uniforme, con un Fisher–Yates sin sesgo sobre crypto.getRandomValues. La diseñé, construí y publiqué yo; va por la v1.4 y tiene 300+ pruebas unitarias y end-to-end en CI.',
           stack: ['JavaScript', 'PWA', 'Playwright', 'GitHub Actions'],
-          repo: gh('new-spoti'),
-          demo: 'https://juandelmazovazquez.github.io/new-spoti/?demo=1',
+          repo: gh('shuffl'),
+          demo: 'https://juandelmazovazquez.github.io/shuffl/?demo=1',
           demoNote: 'modo demo, sin cuenta',
         },
         {
@@ -322,7 +322,7 @@ export const content = {
         {
           title: 'Previsión de ventas según la inversión en marketing',
           tag: 'Máster · 2024',
-          body: 'Previsión de las ventas semanales a partir de la inversión publicitaria y el tráfico web, con una validación cruzada que respeta el orden temporal. Una combinación ponderada (ensemble) de Elastic Net, Random Forest, XGBoost, KNN y una red neuronal consiguió un MAE de validación de 298,75. Proyecto en equipo.',
+          body: 'Previsión de las ventas semanales a partir de la inversión publicitaria y el tráfico web, con una validación cruzada que respeta el orden temporal. Una combinación ponderada (ensemble) de Elastic Net, Random Forest, XGBoost, KNN y una red neuronal superó en validación a todos los modelos por separado. Proyecto en equipo.',
           stack: ['R', 'Elastic Net', 'Random Forest', 'XGBoost'],
           repo: gh('Sales-Prediction-Advanced-Regression'),
         },
@@ -356,15 +356,15 @@ export const content = {
           status: 'v1.4 publicada · sigo iterando',
           body: 'Shuffl, la app de Spotify de más arriba, sigue creciendo: va por la v1.4 y sigo añadiendo funciones y puliendo la siguiente versión.',
           stack: ['JavaScript', 'PWA', 'Playwright'],
-          repo: gh('new-spoti'),
+          repo: gh('shuffl'),
         },
       ],
     },
     education: {
       heading: 'Formación',
       items: [
-        { title: 'Máster en Big Data Analytics', org: 'Universidad Carlos III de Madrid', years: '2024 – 2025', note: 'Calificación final: 1st Class (Hons.). Impartido en inglés.' },
-        { title: 'Grado en Ingeniería Informática', org: 'Universidad Politécnica de Madrid', years: '2019 – 2024', note: 'Nota media: 1st Class (Hons.).' },
+        { title: 'Máster en Big Data Analytics', org: 'Universidad Carlos III de Madrid', years: '2024 – 2025', note: 'Calificación final: sobresaliente. Impartido en inglés.' },
+        { title: 'Grado en Ingeniería Informática', org: 'Universidad Politécnica de Madrid', years: '2019 – 2024', note: 'Nota media: sobresaliente.' },
         { title: 'Erasmus en Informática (Computer Science)', org: 'Universidad de Bristol', years: '2021 – 2022', note: 'Nota media: 1st Class (Hons.).' },
       ],
       awardsIntro: 'Matrícula de Honor en:',
