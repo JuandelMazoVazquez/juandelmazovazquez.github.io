@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" width="1280" height="300">
+<style>
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader.woff2') format('woff2');font-weight:300 700;font-style:normal}
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader-italic.woff2') format('woff2');font-weight:300 700;font-style:italic}
+.serif{font-family:'Newsreader',Georgia,serif}
+.mono{font-family:'Cascadia Mono',Consolas,ui-monospace,monospace}
+</style>
+<rect width="1280" height="300" rx="16" fill="#f6f4ef"/>
+<g transform="translate(64 64)">
+  <rect width="56" height="56" rx="11.2" fill="#1f5d50"/>
+  <g fill="#f6f4ef" transform="translate(7.3 35.7) scale(0.01049)"><path transform="translate(0 0)" d="M624 -535Q585 -409 515 -306Q444 -204 358 -131Q272 -58 185 -19Q97 20 23 20Q-45 20 -79 -8Q-113 -36 -113 -79Q-113 -125 -83 -154Q-52 -184 -15 -184Q-2 -184 14 -169Q29 -155 49 -136Q69 -117 94 -103Q118 -88 149 -88Q196 -88 227 -117Q257 -146 284 -235L630 -1367L472 -1409L478 -1430H1058L1052 -1409L877 -1363Z"/><path transform="translate(650 0)" d="M862 -825Q834 -903 796 -931Q759 -960 710 -960Q641 -960 573 -909Q504 -858 442 -775Q380 -692 331 -595Q282 -498 254 -404Q226 -310 226 -238Q226 -177 251 -154Q275 -130 316 -130Q338 -130 365 -140Q391 -150 424 -173Q456 -197 494 -235Q531 -273 575 -328Q619 -382 669 -457L942 -1281Q924 -1294 899 -1312Q874 -1330 846 -1350Q819 -1371 790 -1392L792 -1403L1205 -1486H1211L763 -87L716 -123Q747 -117 795 -132Q842 -148 909 -197Q975 -245 1061 -339L1071 -332Q943 -144 835 -61Q727 22 644 22Q585 22 566 -8Q547 -38 567 -103L680 -452L692 -452Q595 -300 520 -206Q444 -112 385 -62Q326 -13 279 4Q231 22 191 22Q135 22 91 -1Q47 -24 22 -68Q-2 -111 -2 -173Q-2 -274 34 -392Q71 -510 136 -625Q200 -739 283 -834Q366 -929 459 -986Q552 -1043 647 -1043Q713 -1043 771 -999Q828 -954 869 -863Z"/><path transform="translate(1679 0)" d="M599 -1375 136 -65 311 -21 304 0H-112L-106 -21L72 -64L525 -1339L375 -1409L380 -1430H791L929 -204L877 -196L1724 -1430H1781L1769 -1397L798 16H712L556 -1342ZM1727 -1430H2158L2153 -1409L1956 -1366L1672 -65L1824 -21L1817 0H1241L1247 -21L1426 -66Z"/></g>
+  <circle cx="45.5" cy="44.6" r="3.2" fill="#e08b60"/>
+</g>
+<text class="serif" x="64" y="186" font-size="58" font-weight="500" letter-spacing="-1" fill="#16181b">Juan del Mazo Vázquez</text>
+<text class="serif" x="66" y="238" font-size="32" font-style="italic" fill="#1f5d50">Analyst by profession, engineer by training.</text>
+<g fill="#dcd7cc"><circle cx="860" cy="70" r="2.8"/><circle cx="910" cy="70" r="2.8"/><circle cx="960" cy="70" r="2.8"/><circle cx="1010" cy="70" r="2.8"/><circle cx="860" cy="120" r="2.8"/><circle cx="910" cy="120" r="2.8"/><circle cx="1110" cy="120" r="2.8"/><circle cx="1160" cy="120" r="2.8"/><circle cx="1210" cy="120" r="2.8"/><circle cx="860" cy="170" r="2.8"/><circle cx="910" cy="170" r="2.8"/><circle cx="1010" cy="170" r="2.8"/><circle cx="1060" cy="170" r="2.8"/><circle cx="1110" cy="170" r="2.8"/><circle cx="1160" cy="170" r="2.8"/><circle cx="1210" cy="170" r="2.8"/><circle cx="1010" cy="220" r="2.8"/><circle cx="1060" cy="220" r="2.8"/><circle cx="1110" cy="220" r="2.8"/><circle cx="1210" cy="220" r="2.8"/></g>
+<path stroke="#b9b3a6" fill="none" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 6" d="M1060 120 L1060 200 Q1060 220 1080 220 L1160 220"/>
+<circle stroke="#b9b3a6" fill="#f6f4ef" cx="1160" cy="220" r="5" stroke-width="2"/>
+<path stroke="#1f5d50" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M860 220 L940 220 Q960 220 960 200 L960 140 Q960 120 980 120 L1040 120 Q1060 120 1060 100 L1060 90 Q1060 70 1080 70 L1210 70"/>
+<g fill="#1f5d50"><circle cx="910" cy="220" r="4.3"/><circle cx="960" cy="220" r="4.3"/><circle cx="960" cy="170" r="4.3"/><circle cx="960" cy="120" r="4.3"/><circle cx="1010" cy="120" r="4.3"/><circle cx="1060" cy="120" r="4.3"/><circle cx="1060" cy="70" r="4.3"/><circle cx="1110" cy="70" r="4.3"/><circle cx="1160" cy="70" r="4.3"/></g>
+<circle fill="#1f5d50" cx="860" cy="220" r="5.5"/>
+<path fill="#f6f4ef" stroke="#1f5d50" stroke-width="2.5" stroke-linejoin="round" d="M1060 111.5 L1068.5 120 L1060 128.5 L1051.5 120 Z"/>
+<circle fill="#b0532a" cx="1210" cy="70" r="16" opacity="0.18"/>
+<circle fill="#b0532a" cx="1210" cy="70" r="7.5"/>
+</svg>

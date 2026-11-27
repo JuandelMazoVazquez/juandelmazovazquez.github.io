@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+<style>
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader.woff2') format('woff2');font-weight:300 700;font-style:normal}
+@font-face{font-family:'Newsreader';src:url('/public/fonts/newsreader-italic.woff2') format('woff2');font-weight:300 700;font-style:italic}
+.serif{font-family:'Newsreader',Georgia,serif}
+.mono{font-family:'Cascadia Mono',Consolas,ui-monospace,monospace}
+</style>
+<rect width="1500" height="500" fill="#101214"/>
+<g fill="#2b3035"><circle cx="380" cy="80" r="3.1"/><circle cx="436" cy="80" r="3.1"/><circle cx="492" cy="80" r="3.1"/><circle cx="548" cy="80" r="3.1"/><circle cx="604" cy="80" r="3.1"/><circle cx="660" cy="80" r="3.1"/><circle cx="716" cy="80" r="3.1"/><circle cx="772" cy="80" r="3.1"/><circle cx="380" cy="136" r="3.1"/><circle cx="436" cy="136" r="3.1"/><circle cx="492" cy="136" r="3.1"/><circle cx="548" cy="136" r="3.1"/><circle cx="380" cy="192" r="3.1"/><circle cx="436" cy="192" r="3.1"/><circle cx="492" cy="192" r="3.1"/><circle cx="548" cy="192" r="3.1"/><circle cx="660" cy="192" r="3.1"/><circle cx="716" cy="192" r="3.1"/><circle cx="772" cy="192" r="3.1"/><circle cx="380" cy="248" r="3.1"/><circle cx="436" cy="248" r="3.1"/><circle cx="660" cy="248" r="3.1"/><circle cx="716" cy="248" r="3.1"/><circle cx="772" cy="248" r="3.1"/><circle cx="380" cy="304" r="3.1"/><circle cx="436" cy="304" r="3.1"/><circle cx="548" cy="304" r="3.1"/><circle cx="604" cy="304" r="3.1"/><circle cx="660" cy="304" r="3.1"/><circle cx="716" cy="304" r="3.1"/><circle cx="772" cy="304" r="3.1"/><circle cx="548" cy="360" r="3.1"/><circle cx="604" cy="360" r="3.1"/><circle cx="660" cy="360" r="3.1"/><circle cx="772" cy="360" r="3.1"/></g>
+<path stroke="#4a5158" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="1.1 6.7" d="M604 248 L604 337.6 Q604 360 626.4 360 L716 360"/>
+<circle stroke="#4a5158" fill="#101214" cx="716" cy="360" r="5.6" stroke-width="2.2"/>
+<path stroke="#7cc3ac" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M380 360 L469.6 360 Q492 360 492 337.6 L492 270.4 Q492 248 514.4 248 L581.6 248 Q604 248 604 225.6 L604 158.4 Q604 136 626.4 136 L772 136"/>
+<g fill="#7cc3ac"><circle cx="436" cy="360" r="4.8"/><circle cx="492" cy="360" r="4.8"/><circle cx="492" cy="304" r="4.8"/><circle cx="492" cy="248" r="4.8"/><circle cx="548" cy="248" r="4.8"/><circle cx="604" cy="248" r="4.8"/><circle cx="604" cy="192" r="4.8"/><circle cx="604" cy="136" r="4.8"/><circle cx="660" cy="136" r="4.8"/><circle cx="716" cy="136" r="4.8"/></g>
+<circle fill="#7cc3ac" cx="380" cy="360" r="6.2"/>
+<path fill="#101214" stroke="#7cc3ac" stroke-width="2.8" stroke-linejoin="round" d="M604 238.5 L613.5 248 L604 257.5 L594.5 248 Z"/>
+<circle fill="#e08b60" cx="772" cy="136" r="17.9" opacity="0.18"/>
+<circle fill="#e08b60" cx="772" cy="136" r="8.4"/>
+<text class="serif" x="1420" y="212" font-size="62" font-weight="500" letter-spacing="-0.8" fill="#ebe8e1" text-anchor="end">Analyst by profession,</text>
+<text class="serif" x="1420" y="284" font-size="62" font-style="italic" fill="#7cc3ac" text-anchor="end">engineer by training.</text>
+<text class="mono" x="1420" y="352" font-size="22" fill="#9da2a8" text-anchor="end">Data · Business · Software</text>
+</svg>
