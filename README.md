@@ -13,7 +13,7 @@ Both serve the same build; every page declares the Vercel URL as canonical.
 
 - `/` (English, default) and `/es/` (Spanish), linked with `hreflang`
 - `sitemap.xml`, `robots.txt`, `404.html`
-- assets from `public/` (styles, script, self-hosted Newsreader font, favicon, Open Graph image)
+- assets from `public/` (styles, script, self-hosted Newsreader font, favicons, Open Graph images per language)
 - the CV PDFs from `cv/`
 
 ```bash
@@ -22,6 +22,17 @@ python -m http.server -d dist 4321   # preview at http://127.0.0.1:4321
 ```
 
 To change any text, edit `src/content.mjs` and rebuild.
+
+## Brand
+
+`brand/` holds the visual identity: the JdM monogram (letters drawn as paths from Newsreader Italic, so it needs no font), a motif of a data grid with a route that reaches a decision, and the palette. `brand/brand.mjs` is shared with the site build, which draws the hero from the same motif.
+
+```bash
+node brand/build-brand.mjs                              # SVG sources in brand/
+NODE_PATH=/path/to/node_modules node brand/export.cjs   # PNGs in brand/png/ (needs Playwright)
+```
+
+The export also copies the Open Graph images and favicons to `public/`. Files in `brand/png/`: Open Graph (1200×630, EN and ES), LinkedIn banner (1584×396), X banner (1500×500), GitHub README header (light and dark), monogram and icons.
 
 ## CV
 

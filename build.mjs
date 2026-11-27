@@ -1,5 +1,6 @@
 import { cpSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { content, contact, SITE_URL } from './src/content.mjs';
+import { markGroup, motif, heroMotif } from './brand/brand.mjs';
 
 const OUT = 'dist';
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -7,28 +8,14 @@ const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
-// Deterministic pseudo-random walk so the hero chart is identical on every build.
-function leadLagPaths() {
-  let seed = 7;
-  const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647) - 0.5;
-  const n = 64;
-  const lag = 6;
-  const lead = [];
-  let v = 0;
-  for (let i = 0; i < n + lag; i++) lead.push((v += rand() * 2.2 + 0.04));
-  const lagged = lead.map((_, i) => (i < lag ? lead[0] : lead[i - lag] + rand() * 0.5 - 0.6));
-  const all = [...lead, ...lagged];
-  const min = Math.min(...all);
-  const max = Math.max(...all);
-  const W = 600;
-  const H = 220;
-  const toPath = (arr) =>
-    arr
-      .slice(lag)
-      .map((y, i) => `${i ? 'L' : 'M'}${((i / (n - 1)) * W).toFixed(1)} ${(H - 12 - ((y - min) / (max - min)) * (H - 24)).toFixed(1)}`)
-      .join(' ');
-  return { a: toPath(lead), b: toPath(lagged), W, H };
-}
+const HERO_GAP = 60;
+const HERO_PAD = 36;
+const heroArt = {
+  W: (heroMotif.cols - 1) * HERO_GAP + HERO_PAD * 2,
+  H: (heroMotif.rows - 1) * HERO_GAP + HERO_PAD * 2,
+  body: motif({ ...heroMotif, gap: HERO_GAP, x: HERO_PAD, y: HERO_PAD, classes: true, animate: true }),
+};
+const headerMark = `<svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">${markGroup({ size: 64, withNode: false })}</svg>`;
 
 const icons = {
   github:
@@ -60,7 +47,6 @@ function personJsonLd(c) {
 }
 
 function page(c, other) {
-  const { a, b, W, H } = leadLagPaths();
   const cvSelf = `/cv/juan-del-mazo-cv-${c.lang}.pdf`;
   const cvOther = `/cv/juan-del-mazo-cv-${other.lang}.pdf`;
   const navItems = Object.entries(c.nav)
@@ -95,6 +81,25 @@ function page(c, other) {
           </p>
         </article>`,
     )
+    .join('');
+
+  const now = c.now.items
+    .map(
+      (p) => `
+        <article class="card card-now">
+          <p class="status"><span class="status-dot" aria-hidden="true"></span>${esc(p.status)}</p>
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.body)}</p>
+          <ul class="chips" aria-label="Stack">${p.stack.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
+          <p class="card-links">
+            ${p.repo ? `<a href="${p.repo}" rel="noopener" aria-label="${esc(c.ui.code)}: ${esc(p.title)}">${icons.github}<span>${esc(c.ui.code)}</span></a>` : `<span class="muted">${esc(c.ui.private)}</span>`}
+          </p>
+        </article>`,
+    )
+    .join('');
+
+  const about = c.about.blocks
+    .map((b) => `<div class="about-row"><h3>${esc(b.label)}</h3><p>${esc(b.text)}</p></div>`)
     .join('');
 
   const education = c.education.items
@@ -134,10 +139,10 @@ function page(c, other) {
 <meta property="og:title" content="${esc(c.title)}">
 <meta property="og:description" content="${esc(c.description)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE_URL}/og.png">
+<meta property="og:image" content="${SITE_URL}/og-${c.lang}.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Juan del Mazo Vázquez">
+<meta property="og:image:alt" content="${esc(c.ogAlt)}">
 <meta property="og:locale" content="${c.locale}">
 <meta property="og:locale:alternate" content="${other.locale}">
 <meta property="profile:first_name" content="Juan">
@@ -146,6 +151,8 @@ function page(c, other) {
 <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101214" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -155,7 +162,7 @@ function page(c, other) {
 <a class="skip" href="#main">${esc(c.ui.skip)}</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="monogram" href="${c.path}" aria-label="Juan del Mazo Vázquez">JdM</a>
+    <a class="monogram" href="${c.path}" aria-label="Juan del Mazo Vázquez">${headerMark}</a>
     <nav aria-label="${c.lang === 'es' ? 'Principal' : 'Main'}"><ul>${navItems}</ul></nav>
     <div class="header-actions">
       <a class="lang" href="${other.path}" hreflang="${other.lang}" lang="${other.lang}" aria-label="${esc(c.ui.langSwitchLabel)}">${other.lang.toUpperCase()}</a>
@@ -176,19 +183,15 @@ function page(c, other) {
         <a class="text-link" href="${cvOther}" download hreflang="${other.lang}">${esc(c.ui.cvOther)} (PDF)</a>
       </p>
     </div>
-    <figure class="hero-chart">
-      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.hero.chart)}">
-        <g class="grid">${[1, 2, 3].map((k) => `<line x1="0" x2="${W}" y1="${(H / 4) * k}" y2="${(H / 4) * k}"/>`).join('')}</g>
-        <path class="series series-a" d="${a}" pathLength="1"/>
-        <path class="series series-b" d="${b}" pathLength="1"/>
-      </svg>
-      <figcaption><span class="key key-a">lead</span> <span class="key key-b">lag</span> <span class="muted">t → t + 6</span></figcaption>
+    <figure class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 ${heroArt.W} ${heroArt.H}">${heroArt.body}</svg>
+      <figcaption><span class="key key-data">${esc(c.hero.legend[0])}</span> <span class="key key-decision">${esc(c.hero.legend[1])}</span> <span class="key key-build">${esc(c.hero.legend[2])}</span></figcaption>
     </figure>
   </section>
 
   <section id="about" class="section wrap" aria-labelledby="about-h">
     <h2 id="about-h"><span class="num" aria-hidden="true">01</span>${esc(c.about.heading)}</h2>
-    <div class="prose">${c.about.body.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
+    <div class="about">${about}</div>
   </section>
 
   <section id="experience" class="section wrap" aria-labelledby="exp-h">
@@ -202,8 +205,14 @@ function page(c, other) {
     <div class="cards">${projects}</div>
   </section>
 
+  <section id="now" class="section wrap" aria-labelledby="now-h">
+    <h2 id="now-h"><span class="num" aria-hidden="true">04</span>${esc(c.now.heading)}</h2>
+    <p class="section-intro">${esc(c.now.intro)}</p>
+    <div class="cards cards-now">${now}</div>
+  </section>
+
   <section id="education" class="section wrap" aria-labelledby="edu-h">
-    <h2 id="edu-h"><span class="num" aria-hidden="true">04</span>${esc(c.education.heading)}</h2>
+    <h2 id="edu-h"><span class="num" aria-hidden="true">05</span>${esc(c.education.heading)}</h2>
     <ol class="edu">${education}</ol>
     <div class="edu-extra">
       <div>
@@ -219,7 +228,7 @@ function page(c, other) {
   </section>
 
   <section id="stack" class="section wrap" aria-labelledby="stack-h">
-    <h2 id="stack-h"><span class="num" aria-hidden="true">05</span>${esc(c.stack.heading)}</h2>
+    <h2 id="stack-h"><span class="num" aria-hidden="true">06</span>${esc(c.stack.heading)}</h2>
     <div class="stack">${stack}
       <div class="stack-row"><h3>${esc(c.stack.areasHeading)}</h3><p>${c.stack.areas.map(esc).join(' · ')}</p></div>
       <div class="stack-row"><h3>${esc(c.stack.languagesHeading)}</h3><p>${esc(c.stack.languages)}</p></div>
@@ -227,7 +236,7 @@ function page(c, other) {
   </section>
 
   <section id="contact" class="section wrap" aria-labelledby="contact-h">
-    <h2 id="contact-h"><span class="num" aria-hidden="true">06</span>${esc(c.contactSection.heading)}</h2>
+    <h2 id="contact-h"><span class="num" aria-hidden="true">07</span>${esc(c.contactSection.heading)}</h2>
     <p class="section-intro">${esc(c.contactSection.body)}</p>
     <dl class="contact">
       <div><dt>${esc(c.contactSection.email)}</dt><dd><a href="mailto:${contact.email}">${contact.email}</a></dd></div>
